@@ -41,8 +41,11 @@ export class AddEventComponent implements OnInit {
       DateEven: this.event.date,
       Description: this.event.description
     })
-      .subscribe(async(data: any) => {
-       await this.eventser.addimage(data.newEvent._id, formdata)
+      .subscribe((data: any) => {
+        console.log(data)
+      this.eventser.addimage(data.newEvent._id, formdata).subscribe(even=>{
+        console.log(even)
+      })
 
       });
   }
