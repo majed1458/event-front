@@ -1,0 +1,31 @@
+
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationDefault01">Title</label>
+        <input [(ngModel)]="event.title" type="text" class="form-control" id="validationDefault01" placeholder="title"  required>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="validationDefault02">Date</label>
+        <input [(ngModel)]="event.date" type="date" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
+      </div>
+      
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationDefault03">Description</label>
+        <input [(ngModel)]="event.description" type="text" class="form-control" id="validationDefault03" placeholder="City" required>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationDefault04">Address</label>
+        <input [(ngModel)]="event.address" type="text" class="form-control" id="validationDefault04" placeholder="State" required>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationDefault04">Address</label>
+        <input (change)="selectImage($event)" type="file" class="form-control" id="validationDefault04" placeholder="image" required>
+      </div>
+     
+    </div>
+   
+    <button class="btn btn-primary" (click)="addEvent()" >Submit form</button>
+  
+    <!-- <button *ngIf="event.id !==''" class="btn btn-primary" type="file"></button> -->
